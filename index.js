@@ -6,7 +6,7 @@ const canvasOffsetX = canvas.offsetLeft;
 const canvasOffsetY = canvas.offsetTop;
 
 canvas.width = window.innerWidth - canvasOffsetX;
-canvas.width = window.innerHeight - canvasOffsetY;
+canvas.height = window.innerHeight - canvasOffsetY;
 
 let isPainting = false;
 let lineWidth = 5;
@@ -20,7 +20,7 @@ toolbar.addEventListener("click", (e) => {
   }
 });
 
-toolbar.addEventListener("click", (e) => {
+toolbar.addEventListener("change", (e) => {
   if (e.target.id === "stroke") {
     ctx.strokeStyle = e.target.value;
   }
@@ -35,7 +35,7 @@ const draw = (e) => {
     return;
   }
   ctx.lineWidth = lineWidth;
-  ctx.lineWidth = "round";
+  ctx.lineCap = "round";
 
   ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
   ctx.stroke();
