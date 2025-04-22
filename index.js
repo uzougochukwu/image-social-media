@@ -14,13 +14,13 @@ let lineWidth = 5;
 let startX;
 let startY;
 
-toolbar.addEventListener("click", (e) => {
+toolbar.addEventListener("click", e => {
   if (e.target.id === "clear") {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 });
 
-toolbar.addEventListener("change", (e) => {
+toolbar.addEventListener("change", e => {
   if (e.target.id === "stroke") {
     ctx.strokeStyle = e.target.value;
   }
@@ -47,7 +47,7 @@ canvas.addEventListener("mousedown", (e) => {
   startY = e.clientY;
 });
 
-canvas.addEventListener("mouseup", (e) => {
+canvas.addEventListener("mouseup", e => {
   isPainting = false;
   ctx.stroke();
   ctx.beginPath();
