@@ -18,18 +18,17 @@ toolbar.addEventListener("click", (e) => {
   if (e.target.id === "submit") {
     ctx.save();
 
-    // convert our canvas to a data URL
     let canvasUrl = canvas.toDataURL();
 
-    // create an anchor and set the href value to our data URL
     const createEl = document.createElement("a");
 
     createEl.href = canvasUrl;
 
-    // this is the name of our downloaded file
+    console.log(canvasUrl);
+    
+
     createEl.download = "download-this-canvas";
 
-    // Click the download button, causing a download, and then remove it
     createEl.click();
     createEl.remove();
   }
