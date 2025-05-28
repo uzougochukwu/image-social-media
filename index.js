@@ -14,19 +14,19 @@ let lineWidth = 5;
 let startX;
 let startY;
 
-toolbar.addEventListener("click",e => {
-  if (e.target.id === "submit"){
-    ctx.save()
+toolbar.addEventListener("click", (e) => {
+  if (e.target.id === "submit") {
+    ctx.save();
   }
-} )
+});
 
-toolbar.addEventListener("click", e => {
+toolbar.addEventListener("click", (e) => {
   if (e.target.id === "clear") {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 });
 
-toolbar.addEventListener("change", e => {
+toolbar.addEventListener("change", (e) => {
   if (e.target.id === "stroke") {
     ctx.strokeStyle = e.target.value;
   }
@@ -43,7 +43,8 @@ const draw = (e) => {
   ctx.lineWidth = lineWidth;
   ctx.lineCap = "round";
 
-  ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
+  ctx.lineTo(e.clientX - canvasOffsetX, e.clientY - 90);
+
   ctx.stroke();
 };
 
@@ -53,7 +54,7 @@ canvas.addEventListener("mousedown", (e) => {
   startY = e.clientY;
 });
 
-canvas.addEventListener("mouseup", e => {
+canvas.addEventListener("mouseup", (e) => {
   isPainting = false;
   ctx.stroke();
   ctx.beginPath();
