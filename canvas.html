@@ -1,4 +1,14 @@
 <html lang="en">
+  <style>
+    #drawing-board {
+      margin: 0px;
+      padding: 0px;
+      background: #ffffff;
+      border: 3px solid green;
+      width: 1840px;
+      height: 600px;
+    }
+  </style>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,12 +19,13 @@
   <body>
     <h1>Drore</h1>
     <p>Communicate with the world via drawing!</p>
+    <ol id="dynamic-image-list"></ol>
     <section class="container">
       <div id="toolbar">
         <h1></h1>
         <a href="feed.html">
           <button>Main Feed</button>
-      </a>      
+        </a>
         <label for="stroke">Stroke</label>
         <input id="stroke" name="stroke" type="color" />
         <label for="lineWidth">Line Width</label>
@@ -23,7 +34,7 @@
         <button id="submit">Submit</button>
       </div>
       <div class="drawing-board">
-        <canvas id="drawing-board"></canvas>
+        <canvas id="drawing-board" width="200" height="100"></canvas>
       </div>
     </section>
     <a href="feed.html" target="_blank">Main Feed</a>

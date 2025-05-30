@@ -1,4 +1,7 @@
+// create css grid so that the images can be seen on the right hand side and scrolled down 
+
 const canvas = document.getElementById("drawing-board");
+
 const toolbar = document.getElementById("toolbar");
 const ctx = canvas.getContext("2d");
 
@@ -14,6 +17,22 @@ let lineWidth = 5;
 let startX;
 let startY;
 
+var dynamicImageList = document.getElementById("dynamic-image-list");
+
+function addNewDrawing(canvasUrl) {
+  var listImage = document.createElement("img");
+
+  listImage.src = canvasUrl;
+
+  listImage.width = "500";
+  listImage.height = "500";
+
+  console.log(dynamicImageList);
+
+  dynamicImageList.appendChild(listImage);
+
+}
+
 toolbar.addEventListener("click", (e) => {
   if (e.target.id === "submit") {
     ctx.save();
@@ -25,12 +44,14 @@ toolbar.addEventListener("click", (e) => {
     createEl.href = canvasUrl;
 
     console.log(canvasUrl);
-    
+
+    console.log(canvas);
 
     createEl.download = "download-this-canvas";
 
     createEl.click();
     createEl.remove();
+    addNewDrawing(canvasUrl);
   }
 });
 
