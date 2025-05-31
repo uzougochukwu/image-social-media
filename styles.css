@@ -47,25 +47,7 @@ h1 {
   color: white;
   padding: 2px;
 }
-.scroll-bg {
-  background: white;
-  width: 400px;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 50px;
-}
-.scroll-div {
-  background: white;
-  height: 300px;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-.scroll-object {
-  color: wheat;
-  font-family: cursive;
-  font-size: 15px;
-  padding: 10px;
-}
+
 ol {
   list-style: none;
   max-height: 100px;
