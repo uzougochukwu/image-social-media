@@ -1,43 +1,46 @@
+<!DOCTYPE html>
 <html lang="en">
-  <style>
-    #drawing-board {
-      margin: 0px;
-      padding: 0px;
-      background: #ffffff;
-      border: 3px solid green;
-      width: 1840px;
-      height: 600px;
-    }
-  </style>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Drawing Screen</title>
-  </head>
-  <body>
-    <h1>Drore</h1>
-    <p>Communicate with the world via drawing!</p>
-    <ol id="dynamic-image-list"></ol>
-    <section class="container">
-      <div id="toolbar">
-        <h1></h1>
-        <a href="feed.html">
-          <button>Main Feed</button>
-        </a>
-        <label for="stroke">Stroke</label>
-        <input id="stroke" name="stroke" type="color" />
-        <label for="lineWidth">Line Width</label>
-        <input id="lineWidth" name="lineWidth" type="number" value="5" />
-        <button id="clear">Clear</button>
-        <button id="submit">Submit</button>
-      </div>
-      <div class="drawing-board">
-        <canvas id="drawing-board" width="200" height="100"></canvas>
-      </div>
-    </section>
-    <a href="feed.html" target="_blank">Main Feed</a>
-    <script src="./index.js"></script>
-  </body>
+  <div style="overflow-y: auto">
+    <style>
+      #drawing-board {
+        margin: 0px;
+        padding: 0px;
+        background: #ffffff;
+        border: 3px solid green;
+        width: 1840px;
+        height: 600px;
+      }
+    </style>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="styles.css" />
+      <title>Drawing Screen</title>
+    </head>
+    <body>
+      <h1>Drore</h1>
+      <p>Communicate with the world via drawing!</p>
+      <section class="container">
+        <div id="toolbar">
+          <h1></h1>
+          <a href="feed.html">
+            <button>Main Feed</button>
+          </a>
+          <label for="stroke">Stroke</label>
+          <input id="stroke" name="stroke" type="color" />
+          <label for="lineWidth">Line Width</label>
+          <input id="lineWidth" name="lineWidth" type="number" value="5" />
+          <button id="clear">Clear</button>
+          <button id="submit">Submit</button>
+        </div>
+        <div class="drawing-board">
+          <canvas id="drawing-board" width="200" height="100"></canvas>
+        </div>
+      </section>
+      <a href="feed.html" target="_blank">Main Feed</a>
+      <ol id="dynamic-image-list"></ol>
+      <script src="./index.js"></script>
+    </body>
+  </div>
 </html>
