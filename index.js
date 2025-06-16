@@ -1,5 +1,3 @@
-// create css grid so that the images can be seen on the right hand side and scrolled down 
-
 const canvas = document.getElementById("drawing-board");
 
 const toolbar = document.getElementById("toolbar");
@@ -30,7 +28,6 @@ function addNewDrawing(canvasUrl) {
   console.log(dynamicImageList);
 
   dynamicImageList.appendChild(listImage);
-
 }
 
 toolbar.addEventListener("click", (e) => {
